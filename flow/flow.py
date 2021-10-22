@@ -8,7 +8,7 @@ FLOW_NAME = "flow"
 STORAGE = GitHub(
     repo="aqibfayyaz/work",
     path=f"flow/{FLOW_NAME}.py",
-    access_token_secret=PrefectSecret("MYTOKEN"),  # required with private repositories
+    access_token_secret="MYTOKEN",  # required with private repositories
 )
 
 
