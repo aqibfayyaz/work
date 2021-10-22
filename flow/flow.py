@@ -1,13 +1,14 @@
 from prefect import Flow, task
 from prefect.storage import GitHub
 from prefect.run_configs import KubernetesRun
+from prefect.client import Secret
 
 
 FLOW_NAME = "flow"
 STORAGE = GitHub(
     repo="aqibfayyaz/work",
     path=f"flows/{FLOW_NAME}.py",
-    access_token_secret="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",  # required with private repositories
+    access_token_secret=Secret("accesstoken").get(),  # required with private repositories
 )
 
 
