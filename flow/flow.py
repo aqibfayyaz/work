@@ -7,7 +7,7 @@ from prefect.tasks.secrets import PrefectSecret
 FLOW_NAME = "flow"
 STORAGE = GitHub(
     repo="aqibfayyaz/work",
-    path=f"flows/{FLOW_NAME}.py",
+    path=f"flow/{FLOW_NAME}.py",
     #access_token_secret=PrefectSecret("MYTOKEN"),  # required with private repositories
 )
 
